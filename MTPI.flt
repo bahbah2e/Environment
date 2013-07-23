@@ -1,0 +1,53 @@
+## This is a directory/file filter for WinMerge 
+## This filter lets through only files ASP.NET developers care about 
+name: Filter for .NET development
+desc: Exclude Source Control files and directories, Resharper, and C++ Files
+
+## This is an inclusive (loose) filter
+## (it lets through everything not specified)
+def: include
+
+
+## Filters for filenames begin with f: 
+## Filters for directories begin with d: 
+## (Inline comments begin with " ##" and extend to the end of the line) 
+
+## f: \.bzrignore$ ## Bazaar ignore file
+## f: \.cvsignore$ ## CVS ignore file
+## f: \.gitignore$ ## Git ignore file
+## f: \.hgignore$ ## Mercurial ignore file
+## f: \.svnignore$ ## Subversion ignore file
+f: \.bak$ ## subversion backup file
+f: \.bin$ ## resharper database file
+f: \.bmp$ ## image files
+f: \.png$ ## image files
+f: \.cache$ ## C# object files
+f: \.crc$ ## resharper files
+f: \.cpp$ ## C++ files
+f: \.c$ ## C++ files
+f: \.h$ ## C++ files
+f: \.hpp$ ## C++ files
+f: \.dat$ ## ReSharper files
+f: \.datasource$ ## Web Reference files
+f: \.db$ ## Thumbnail files
+f: \.dll$ ## lib files
+f: \.emz$ ##
+f: \.obj$ ##
+f: \.resx$ ##
+f: \.pdb$ ## debug database
+f: \.nupkg$ ## NuGet Package
+f: \.mdb$ ## Access Database
+f: \.xss$ ## XSD design files
+f: \.xsc$ ## XSD design files
+f: \.user$ ## User files
+f: \.suo$ ## User files
+f: \.(vs[sp])?scc$  ## Visual SourceSafe files
+
+d: \\\.svn$ ## Subversion working copy
+d: \\_svn$  ## Subversion working copy ASP.NET Hack
+d: \\cvs$   ## CVS control directory
+d: \\\.git$ ## Git directory
+d: \\\.bzr$ ## Bazaar branch
+d: \\\.hg$ ## Mercurial repository
+d: \\_ReSharper ## Resharper database folder
+d: \\\Debug$ ## debug folder
