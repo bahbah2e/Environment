@@ -1,0 +1,10 @@
+[user]
+name = Patrick Toohey
+email = ptoohey@oswego.edu
+
+[diff]
+    tool = winmerge
+[difftool "winmerge"]
+    cmd = \"c:/program files/winmerge/winmergeu.exe\" -e -u -x -wl -wr -dl "base" -dr "mine" \"$LOCAL\" \"$REMOTE\"
+[push]
+default = current
